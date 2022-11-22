@@ -5,14 +5,14 @@ const _ = require('lodash')
 const app = express()
 app.use(bodyParser.json())
 
+app.get('/', async (req, res) => {
+
+    res.send('Deploy Succeeded!')
+})
+
 app.get('/api/hello', async (req, res) => {
 
     res.send('Hello World')
-})
-
-app.get('/api/merhaba', (req, res) => {
-
-    res.send('Merhaba Dünya')
 })
 
 app.post('/api/name', (req, res) => {
